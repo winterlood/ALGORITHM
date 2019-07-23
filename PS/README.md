@@ -1,9 +1,8 @@
-title
+PROGRAM SOLVING
 ===
 
-sub title1
+BOJ AKA. ACM ICPC
 ---
-> 아 배고프다.
 
-나는 오늘 **제육볶음**을 먹을랭!
-> [제육볶음 맛잇게 만드는 비법](https://m.blog.naver.com/cider99/220428793289) 
+1000문제를 목표로 향하여 일주일에 10개씩은 풀자!
+
