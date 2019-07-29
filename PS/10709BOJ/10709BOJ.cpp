@@ -14,13 +14,18 @@ int main()
 		for (int j = 0; j < m; j++) {
 			cin >> a;
 			if (a == 'c') {
-				cout << "0";
+				if (j == m - 1)cout << "0";
+				else cout << "0 ";
 				lastidx = j;
 			}
 			else {
-				if (lastidx == -1)cout << "-1";
+				if (lastidx == -1) {
+					if (j == m - 1)cout << "-1";
+					else cout << "-1 ";
+				}
 				else {
-					cout << lastidx - j;
+					if (lastidx == -1)cout << j - lastidx;
+					else cout << j - lastidx <<" ";
 				}
 			}
 		}
