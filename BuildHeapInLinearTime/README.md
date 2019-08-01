@@ -1,17 +1,17 @@
-# Build Heap in Linear Time Complexity
+# Build Heap in Linear Time Complexity!
 
-## Heap ÀÇ Æ¯¼º
-1) HeapÀº ¿ÏÀü 2Áø Æ®¸®ÀÌ´Ù.
-2) Heap ¼ºÁú°ú, ¿ÏÀü ÀÌÁøÆ®¸®¸¦ ¸¸Á·ÇÏ¸é HeapÀÌ´Ù. 
-3) Insert ¿¬»êÀº O(N )Áï ÃÖ¾ÇÀÇ °æ¿ì HeapÀÇ Height ¸¸Å­ ºñ±³¸¦ ÁøÇàÇÏ°Ô µÈ´Ù. Leaf ¿¡¼­ root ±îÁö ºñ±³¸¦ ÁøÇà ÇÑ´Ù.
-4) Delete Min or Max ¿¬»êÀº ÇØ´ç ³ëµå¿¡¼­ leaf ±îÁö ºñ±³¸¦ ÁøÇàÇÑ´Ù.
+## Heap ì˜ íŠ¹ì„±
+1) Heapì€ ì™„ì „ 2ì§„ íŠ¸ë¦¬ì´ë‹¤.
+2) Heap ì„±ì§ˆê³¼, ì™„ì „ ì´ì§„íŠ¸ë¦¬ë¥¼ ë§Œì¡±í•˜ë©´ Heapì´ë‹¤. 
+3) Insert ì—°ì‚°ì€ O(N )ì¦‰ ìµœì•…ì˜ ê²½ìš° Heapì˜ Height ë§Œí¼ ë¹„êµë¥¼ ì§„í–‰í•˜ê²Œ ëœë‹¤. Leaf ì—ì„œ root ê¹Œì§€ ë¹„êµë¥¼ ì§„í–‰ í•œë‹¤.
+4) Delete Min or Max ì—°ì‚°ì€ í•´ë‹¹ ë…¸ë“œì—ì„œ leaf ê¹Œì§€ ë¹„êµë¥¼ ì§„í–‰í•œë‹¤.
 
 ## Idea
-Delete Min or Max¿¬»êÀÇ idea¸¦ ÀÌ¿ëÇÏ¿© HeapÀ» ±¸¼º ÇÒ °ÍÀÌ´Ù.
-Leaf ¿¡¼­ºÎÅÍ HeapÀ» ºÎºÐÀûÀ¸·Î ±¸¼ºÇÏ´Â °ÍÀ¸·Î,  ¸ðµç ³ëµåÀÇ ºñ±³ È¸¼ö¸¦ µûÁ® º¸¾ÒÀ» ¶§ Leaf ¿¡¼­ºÎÅÍ root ±îÁö ¿Ã¶ó°¡¸é¼­ Leaf±îÁö key¸¦ ºñ±³ÇÏ´Â ¿¬»êÀº root¿¡¼­ºÎÅÍ leaf±îÁö ³»·Á°¡¸é¼­ key¸¦ ºñ±³ÇÏ´Â ¿¬»ê º¸´Ù ÀÛ´Ù.
-·¹º§ÀÌ ´õ ³ô¾ÆÁú¼ö·Ï, (¼ýÀÚ°¡ ³ô¾ÆÁüÀ» ÀÇ¹ÌÇÔ ·¹º§ÀÌ ³ôÀ»¼ö·Ï Æ®¸®¿¡ ¾Æ·¡¿¡ À§Ä¡ÇÑ´Ù.) ºñ±³ ´ë»ó ³ëµå°¡ ¸¹¾Æ Áö±â ¶§¹®ÀÌ´Ù.
-ÁøÂ¥ ±×·¯ÇÑ°¡?
-ÀüÃ¼ ³ëµå¿¡ ´ëÇØ ÇØ´ç idea¸¦ ÀÌ¿ëÇÏ¿© heapÀ» ±¸¼º ÇÒ ¶§, ÀüÃ¼ ³ëµåÀÇ ºñ±³ ¿¬»êÀº ´ÙÀ½°ú °°´Ù.
-ºñ±³ È¸¼ö¸¦ S¶ó°í ÇßÀ» ¶§, 
+Delete Min or Maxì—°ì‚°ì˜ idea3ë¥¼ ì´ìš©í•˜ì—¬ Heapì„ êµ¬ì„± í•  ê²ƒì´ë‹¤.
+Leaf ì—ì„œë¶€í„° Heapì„ ë¶€ë¶„ì ìœ¼ë¡œ êµ¬ì„±í•˜ëŠ” ê²ƒìœ¼ë¡œ,  ëª¨ë“  ë…¸ë“œì˜ ë¹„êµ íšŒìˆ˜ë¥¼ ë”°ì ¸ ë³´ì•˜ì„ ë•Œ Leaf ì—ì„œë¶€í„° root ê¹Œì§€ ì˜¬ë¼ê°€ë©´ì„œ Leafê¹Œì§€ keyë¥¼ ë¹„êµí•˜ëŠ” ì—°ì‚°ì€ rootì—ì„œë¶€í„° leafê¹Œì§€ ë‚´ë ¤ê°€ë©´ì„œ keyë¥¼ ë¹„êµí•˜ëŠ” ì—°ì‚° ë³´ë‹¤ ìž‘ë‹¤.
+ë ˆë²¨ì´ ë” ë†’ì•„ì§ˆìˆ˜ë¡, (ìˆ«ìžê°€ ë†’ì•„ì§ì„ ì˜ë¯¸í•¨ ë ˆë²¨ì´ ë†’ì„ìˆ˜ë¡ íŠ¸ë¦¬ì— ì•„ëž˜ì— ìœ„ì¹˜í•œë‹¤.) ë¹„êµ ëŒ€ìƒ ë…¸ë“œê°€ ë§Žì•„ ì§€ê¸° ë•Œë¬¸ì´ë‹¤.
+ì§„ì§œ ê·¸ëŸ¬í•œê°€?
+ì „ì²´ ë…¸ë“œì— ëŒ€í•´ í•´ë‹¹ ideaë¥¼ ì´ìš©í•˜ì—¬ heapì„ êµ¬ì„± í•  ë•Œ, ì „ì²´ ë…¸ë“œì˜ ë¹„êµ ì—°ì‚°ì€ ë‹¤ìŒê³¼ ê°™ë‹¤.
+ë¹„êµ íšŒìˆ˜ë¥¼ Së¼ê³  í–ˆì„ ë•Œ, 
 
 ![](./img/img1.JPG)
