@@ -1,4 +1,4 @@
-# Build Heap in Linear Time Complexity!
+# Build Heap in Linear Time Complexity!!
 
 ## Heap 의 특성
 1) Heap은 완전 2진 트리이다.
